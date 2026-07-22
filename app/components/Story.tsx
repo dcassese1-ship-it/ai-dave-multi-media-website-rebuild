@@ -27,11 +27,11 @@ const CHAPTERS = [
     log: "05",
     title: "Ascension Protocol",
     ep: "Ascension Protocol",
-    status: "in production",
+    status: "streaming",
   },
   {
     log: "—",
-    title: "Epilogue: The Dawn of Digitized Humanity",
+    title: "Full Soundtrack - 21 Songs",
     ep: "Full Soundtrack",
     status: "July 28",
   },

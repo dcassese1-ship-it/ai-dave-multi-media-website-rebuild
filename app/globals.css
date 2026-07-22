@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --void: #08070d;
+  --panel: #120f1c;
+  --panel-line: #241f38;
+  --signal: #ff3d8a;
+  --cyan: #22e8d8;
+  --amber: #ffb454;
+  --ink: #ede9f7;
+  --dim: #8d87a0;
+
+  --font-display: var(--font-chakra);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-panel-line: var(--panel-line);
+  --color-signal: var(--signal);
+  --color-cyan: var(--cyan);
+  --color-amber: var(--amber);
+  --color-ink: var(--ink);
+  --color-dim: var(--dim);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--void);
+}
+
+/* scanline texture used behind hero + section dividers */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(237, 233, 247, 0.035) 0px,
+    rgba(237, 233, 247, 0.035) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.blink-dot {
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%, 92%, 100% { opacity: 1; }
+  93% { opacity: 0.4; }
+  95% { opacity: 0.85; }
+  96% { opacity: 0.3; }
+  97% { opacity: 1; }
+}
+.flicker {
+  animation: flicker 6s linear infinite;
+}
+
+@keyframes scanmove {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+.scan-sweep {
+  animation: scanmove 5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink-dot, .flicker, .scan-sweep {
+    animation: none !important;
+  }
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px var(--panel-line);
+  color: transparent;
+}

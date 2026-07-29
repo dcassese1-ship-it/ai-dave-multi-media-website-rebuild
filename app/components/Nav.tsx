@@ -38,10 +38,15 @@ export default function Nav() {
             </a>
           ))}
         </div>
-        <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-cyan">
+        <a
+          href="https://stream.zeno.fm/63pkmy0vr45vv"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-cyan hover:text-signal transition-colors"
+        >
           <span className="h-1.5 w-1.5 rounded-full bg-cyan blink-dot" />
           On Air
-        </div>
+        </a>
       </nav>
     </header>
   );

@@ -52,7 +52,7 @@ export default function Launch() {
                   rel="noopener noreferrer"
                   className="inline-flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-widest text-ink border-b border-cyan pb-1 hover:text-cyan transition-colors"
                 >
-                  Pre-save on Spotify →
+                  On Sale on Spotify →
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0G6698CMR"

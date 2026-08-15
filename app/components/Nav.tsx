@@ -7,7 +7,6 @@ const LINKS = [
   { href: "#watch", label: "Watch" },
   { href: "#music", label: "Music" },
   { href: "/universe", label: "Universe" },
-  { href: "#launch", label: "July 28" },
   { href: "#connect", label: "Connect" },
 ];
 

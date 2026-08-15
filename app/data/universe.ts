@@ -18,6 +18,7 @@ export const ARTISTS: Artist[] = [
     status: "live",
     image: "/images/universe/california-me.jpg",
     links: [
+      { label: "Website", href: "https://www.californiameproject.com/" },
       { label: "YouTube", href: "https://www.youtube.com/@californiameproject" },
       { label: "Spotify", href: "https://open.spotify.com/artist/1iJSeStxqdmszQ5joVzrLY" },
       { label: "ReverbNation", href: "https://www.reverbnation.com/californiame" },
@@ -61,6 +62,7 @@ export const ARTISTS: Artist[] = [
     status: "live",
     image: "/images/universe/open-fracture.jpg",
     links: [
+      { label: "Website", href: "https://www.openfracture.com/" },
       { label: "Spotify", href: "https://open.spotify.com/artist/7I3XDXjscC9Qx6OGOtoVEt" },
     ],
   },

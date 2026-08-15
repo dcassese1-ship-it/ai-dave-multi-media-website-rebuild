@@ -8,10 +8,10 @@ export default function Launch() {
           <div>
             <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.25em] text-amber mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-amber blink-dot" />
-              Priority transmission — pre-save open now
+              Priority transmission
             </div>
             <h2 className="font-display text-3xl sm:text-5xl leading-tight max-w-2xl">
-              The full story lands July 28.
+              The full story out now
             </h2>
           </div>
           <p className="font-mono text-5xl sm:text-6xl text-outline leading-none">

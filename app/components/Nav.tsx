@@ -7,6 +7,7 @@ const LINKS = [
   { href: "#watch", label: "Watch" },
   { href: "#music", label: "Music" },
   { href: "/universe", label: "Universe" },
+  { href: "https://www.aidaveradio.com/", label: "AI Dave Radio" },
   { href: "#connect", label: "Connect" },
 ];
 
@@ -31,14 +32,23 @@ export default function Nav() {
           AI&nbsp;DAVE<span className="text-signal">.</span>
         </a>
         <div className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-dim">
-          {LINKS.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-ink transition-colors">
-              {l.label}
-            </a>
-          ))}
+          {LINKS.map((l) => {
+            const external = l.href.startsWith("http");
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className="hover:text-ink transition-colors"
+              >
+                {l.label}
+              </a>
+            );
+          })}
         </div>
         <a
-          href="https://stream.zeno.fm/63pkmy0vr45vv"
+          href="https://www.aidaveradio.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-cyan hover:text-signal transition-colors"

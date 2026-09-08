@@ -6,6 +6,7 @@ const LINKS = [
   { href: "#story", label: "The Story" },
   { href: "#watch", label: "Watch" },
   { href: "#music", label: "Music" },
+  { href: "/rock-operas", label: "Rock Operas" },
   { href: "/universe", label: "Universe" },
   { href: "https://www.aidaveradio.com/", label: "AI Dave Radio" },
   { href: "#connect", label: "Connect" },

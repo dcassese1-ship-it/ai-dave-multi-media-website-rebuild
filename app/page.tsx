@@ -5,6 +5,7 @@ import Launch from "@/app/components/Launch";
 import Story from "@/app/components/Story";
 import Watch from "@/app/components/Watch";
 import Music from "@/app/components/Music";
+import RockOperaTeaser from "@/app/components/RockOperaTeaser";
 import UniverseTeaser from "@/app/components/UniverseTeaser";
 import Footer from "@/app/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Story />
         <Watch />
         <Music />
+        <RockOperaTeaser />
         <UniverseTeaser />
       </main>
       <Footer />
